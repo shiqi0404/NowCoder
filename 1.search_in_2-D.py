@@ -54,12 +54,14 @@ def Find(target, array):
         col = cols - 1
         while row < rows and col >= 0:
             if target == array[row][col]:           # 这里的判断“相等”关系的时候用“==”
+                print True                          # 本地输出看一下效果
                 return True
             elif target < array[row][col]:          # 这里观察矩阵，目标值小于当前元素，那么说明在左侧/下侧 row加 col减
                 col -= 1
             else:
                 row += 1
+    print False                                     # 本地输出看一下效果
     return False
 
 
-Find(7, [[1, 2, 8, 9], [2, 4, 9, 12], [4, 7, 10, 13], [6, 8, 11, 15]])
+Find(7, [[1, 2, 8, 9], [2, 4, 9, 12], [4, 7, 10, 13], [6, 8, 11, 15]])      # 应该是输出True
