@@ -32,4 +32,27 @@ replace("hello  world")             # 包含两个空格
 
 
 # 再来加几个扩展基础
+# 不同整型数据类型在内存中占多大（字节）
+a = 2
+b = 4
+c = 8
+d = 8
+print ('The size of short is %d bytes.' % a)        # short 2 bytes
+print ('The size of int is %d bytes.' % b)          # int   4 bytes
+print ('The size of long is %d bytes.' % c)         # long  8 bytes
+print ('The size of long long is %d bytes.' % d)    # long long 8 bytes
+
+
+# 带编号输出相应字符指令
+d = 'data'
+# main = ('Define', 'Input', 'Process', 'Output')
+ll = ['Define', 'Input', 'Process', 'Output']     # 这里是列表 用 [] 不是 ()
+count = 1
+for i in ll:
+    if count == 4:
+        print (str(count)+'. '+'%s data.' % i)
+    else:
+        print (str(count)+'. '+'%s data;' % i)
+    count += 1
+
 
